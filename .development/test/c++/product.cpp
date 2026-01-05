@@ -18,12 +18,12 @@ void listar(struct Produto produtos[], int n) {
 void buscar(struct Produto produtos[], int n, int codigo) {
     for (int i = 0; i < n; i++) {
         if (produtos[i].codigo == codigo) {
-            printf("Encontrado: %s, Preço: %.2f, Quantidade: %d\n", \
+            printf("Encontrado: %s, PreÃ§o: %.2f, Quantidade: %d\n", \
                 produtos[i].nome, produtos[i].preco, produtos[i].quantidade);
             return;
         }
     }
-    printf("Produto não encontrado.\n");
+    printf("Produto nÃ£o encontrado.\n");
 }
 
 int main() {
@@ -33,7 +33,7 @@ int main() {
         fgets(produtos[i].nome, 50, stdin);
         printf("Codigo: ");
         scanf_s("%d", &produtos[i].codigo);
-        printf("Preço: ");
+        printf("PreÃ§o: ");
         scanf_s("%f", &produtos[i].preco);
         printf("Quantidade: ");
         scanf_s("%d", &produtos[i].quantidade);
@@ -45,4 +45,5 @@ int main() {
     scanf_s("%d", &cod);
     buscar(produtos, 3, cod);
 }
+
 
